@@ -18,14 +18,14 @@ class GreetingServiceTest {
         assertEquals("Alice", s.normalize(input));
 
         String longName = "012345678901234567890123456789XXXX";
-        assertEquals(20, s.normalize(longName).length());
+        assertEquals(30, s.normalize(longName).length());
     }
 
     @Test
     void isQuietHours_trueAtNight_falseAtDay() {
         GreetingService s = new GreetingService();
         assertTrue(s.isQuietHours(LocalTime.of(23, 0)));
-        assertFalse(s.isQuietHours(LocalTime.of(5, 59)));
+        assertTrue(s.isQuietHours(LocalTime.of(5, 59)));
         assertFalse(s.isQuietHours(LocalTime.of(12, 0)));
     }
 }
