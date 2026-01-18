@@ -10,7 +10,7 @@ public class HelloServlet extends HttpServlet {
     private String message;
 
     public void init() {
-        message = "Hello World JDK 17";
+        message = "Hello World JDK 17 final";
     }
 
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
